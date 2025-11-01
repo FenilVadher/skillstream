@@ -122,7 +122,7 @@ class AIEngine {
       // Get all available courses
       const allCourses = await Course.findAll({
         where: {
-          is_active: true,
+          isActive: true,
           id: { [Op.notIn]: completedCourseIds }
         }
       });

@@ -163,7 +163,7 @@ exports.deleteCourse = async (req, res) => {
       return res.status(404).json({ message: 'Course not found' });
     }
 
-    await course.update({ is_active: false });
+    await course.update({ isActive: false });
 
     res.json({
       success: true,

@@ -36,18 +36,16 @@ const Course = sequelize.define('Course', {
     type: DataTypes.STRING(255),
     allowNull: true
   },
-  created_by: {
+  createdBy: {
     type: DataTypes.INTEGER,
-    field: 'created_by',
     allowNull: false,
     references: {
       model: 'users',
       key: 'id'
     }
   },
-  is_active: {
+  isActive: {
     type: DataTypes.BOOLEAN,
-    field: 'is_active',
     defaultValue: true
   }
 }, {

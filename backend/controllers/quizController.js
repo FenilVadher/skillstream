@@ -173,7 +173,7 @@ exports.deleteQuiz = async (req, res) => {
       return res.status(404).json({ message: 'Quiz not found' });
     }
 
-    await quiz.update({ is_active: false });
+    await quiz.update({ isActive: false });
 
     res.json({
       success: true,

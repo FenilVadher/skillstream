@@ -90,7 +90,7 @@ exports.login = async (req, res) => {
         email: user.email,
         role: user.role,
         avatar: user.avatar,
-        lastLogin: user.last_login
+        lastLogin: user.lastLogin
       },
       token
     });

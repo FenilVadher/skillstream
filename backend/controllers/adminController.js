@@ -318,7 +318,7 @@ exports.getSystemAnalytics = async (req, res) => {
         'category',
         [require('sequelize').fn('COUNT', require('sequelize').col('id')), 'count']
       ],
-      where: { is_active: true },
+      where: { isActive: true },
       group: ['category']
     });
 

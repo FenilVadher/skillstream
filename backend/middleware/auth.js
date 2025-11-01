@@ -13,7 +13,7 @@ const protect = async (req, res, next) => {
         attributes: { exclude: ['password'] }
       });
 
-      if (!req.user || !req.user.is_active) {
+      if (!req.user || !req.user.isActive) {
         return res.status(401).json({ message: 'User not found or inactive' });
       }
 
