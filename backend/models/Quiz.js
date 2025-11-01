@@ -28,25 +28,29 @@ const Quiz = sequelize.define('Quiz', {
     allowNull: true,
     comment: 'Duration in minutes'
   },
-  passingScore: {
+  passing_score: {
     type: DataTypes.INTEGER,
+    field: 'passing_score',
     defaultValue: 70,
     comment: 'Passing percentage'
   },
-  totalMarks: {
+  total_marks: {
     type: DataTypes.INTEGER,
+    field: 'total_marks',
     defaultValue: 100
   },
-  createdBy: {
+  created_by: {
     type: DataTypes.INTEGER,
+    field: 'created_by',
     allowNull: false,
     references: {
       model: 'users',
       key: 'id'
     }
   },
-  isActive: {
+  is_active: {
     type: DataTypes.BOOLEAN,
+    field: 'is_active',
     defaultValue: true
   }
 }, {
